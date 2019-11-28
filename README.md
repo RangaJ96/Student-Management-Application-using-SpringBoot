@@ -4,6 +4,6 @@ In here the application is developed usnig Three-tier architecture.
 
 Use Technologies:
 
-  SpringBoot
+  SpringBoot, 
   MySQL databases
   
