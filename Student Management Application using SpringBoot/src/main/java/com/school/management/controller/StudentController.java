@@ -17,23 +17,23 @@ public class StudentController {
     @Autowired
    private StudentService studentService;
 
-    @GetMapping("/all")
+    @GetMapping("/findAll")
     public List<StudentDTO> findAllStudents(){
         return studentService.findAllStudents();
     }
 
-    @PostMapping("/save")
+    @PostMapping("/saveStudent")
     public String saveStudent(@RequestBody StudentDTO studentDTO){
         studentService.saveStudent(studentDTO);
         return "Data saved";
     }
 
-    @PutMapping("/update")
+    @PutMapping("/updateStudent")
     public String updateStudent(@RequestBody StudentDTO updateStudentDTO){
         return studentService.updateStudent(updateStudentDTO);
     }
 
-    @GetMapping("/find/{id}")
+    @GetMapping("/findStudent/{id}")
     public Optional<StudentDTO> findById(@PathVariable Integer id){
         return studentService.findById(id);
     }
